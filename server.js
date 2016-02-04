@@ -18,14 +18,14 @@ router.route('/test')
     // create a bear (accessed at POST http://localhost:8080/api/bears)
     .get(function(req, res) {
         
-         res.json({ message: 'hooray! welcome to the test endpoint!' });   
+         res.json({ message: 'api version 1' });   
         
     });
 
 
 // test route to make sure everything is working (accessed at GET http://localhost:8080/api)
 router.get('/', function(req, res) {
-    res.json({ message: 'hooray! welcome to our api!' });   
+    res.json({ message: 'weclome to v1.0 of the API!' });   
 });
 
 // more routes for our API will happen here
@@ -37,4 +37,4 @@ app.use('/api', router);
 // START THE SERVER
 // =============================================================================
 app.listen(port);
-console.log('Magic happens on port ' + port);
+console.log('listening on port ' + port);
